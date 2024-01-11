@@ -1,0 +1,381 @@
+html {
+    background-color: rgb(218, 218, 218);
+    cursor: crosshair;
+    height: 100%;
+    color: rgb(31, 31, 31);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* body {
+    background-image: url(content/gradient-03.png);
+    background-size: 100%;
+} */
+body {
+    margin: 0px;
+}
+
+
+h1 {
+    /* color: rgb(31, 31, 31); */
+    font-weight: 200;
+    text-align: left;
+    padding: 10px;
+    margin: 8px;
+}
+
+h2 {
+    /* color: rgb(31, 31, 31); */
+    font-size: 24px;
+    font-weight: 20;
+    /* padding: 14px 7px; */
+    max-width: 700px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 20;
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    max-width: 700px;
+    margin: 8px
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    font-style: italic;
+    position: relative;
+    display: flex;
+
+    justify-content: space-between; /* Add this to space out the buttons */
+    align-items: center; /* Add this to vertically center the content and buttons */
+}
+
+.footer-content {
+    margin: 0 auto; /* Center the text within the footer */
+    position: relative;
+    display: inline-block; /* Make the span only as wide as its content */
+}
+
+.footer-content span::before,
+.footer-content span::after {
+    content: "";
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* Adjust the width as needed */
+    height: 2px; /* Adjust the height or thickness of the line as needed */
+    background-color: #333; /* Adjust the line color */
+}
+
+.footer-content span::before {
+    top:-10px;
+}
+
+.footer-content span::after {
+    bottom: -10px;
+}
+
+/* nav button effects */
+/* .button-box {
+    padding: 20px;
+    text-align: center;
+    font-style: italic;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.footer-button {
+    background: none;
+    border: 1px solid black;
+    max-width: 100px;
+    padding: 8px;
+    color: #333; /* Adjust the color as needed */
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    position: relative; /* Added position:relative to .footer-button */
+}
+
+.footer-button::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-left: 5px;
+    position: absolute; /* Changed position to absolute */
+    left: 50%;
+    top: -20px; /* Adjusted top position to move above the content */
+    transform: translate(-50%, 0);
+    transition: all 0.3s ease; /* Added transition to left property */
+}
+
+.footer-button.next::before {
+    border-width: 8px 0 8px 8px; /* Adjusted to point right */
+    border-color: transparent transparent transparent #333; /* Adjusted to point right */
+}
+
+.footer-button.previous::before {
+    border-width: 8px 8px 8px 0; /* Adjusted to point left */
+    border-color: transparent #333 transparent transparent; /* Adjusted to point left */
+}
+
+.footer-button:hover {
+    background-color: rgb(31, 31, 31, .5); /* Change the color on hover */
+    color: rgb(218, 218, 218);
+    border: 1px solid rgb(31, 31, 31);
+}
+
+.footer-button.previous:hover::before {
+    left: 35%; /* Adjusted the left position for the "Previous" triangle on hover */
+}
+
+.footer-button.next:hover::before {
+    left: 65%; /* Adjusted the left position for the "Next" triangle on hover */
+}
+/* end nav button effects */
+
+.menu {
+    float:right;
+    font-size:20px;
+    padding-top: 5px;
+    margin: 5px;
+    font-style: italic;
+}
+
+a.links {
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(31, 31, 31);
+}
+/* @media (max-width: 800px) {
+    a.links.menu {
+        font-size: 3vw;
+    }
+    a.links.menu:hover {
+        font-size:10px;
+        display: block;
+    }
+} */
+
+a.links.menu {
+    float: right;
+    margin: 10px, 20px;
+    transition: color 1s, font-size 1s;
+    /* display: inline-block */
+}
+
+a.links.menu:hover {
+    /* color: rgb(31, 31, 31); */
+    font-size: 26px;
+    display: block;
+}
+
+#selected {
+    /* color: rgb(31, 31, 31); */
+    font-size: 26px;
+    display: block;
+}
+
+a.socials {
+    color: #664da7;
+    text-decoration: underline;
+    transition: 1s;
+}
+
+a.socials:hover {
+    color: rgb(31, 31, 31);
+    font-size: 105%;
+    transition: 1s;
+    /* text-decoration: none; */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-gap: 1.5%; /* Add gap between grid items for spacing */
+    row-gap: 3%;
+    margin: 8px;
+}
+
+.item {
+    border: 2px solid rgb(31, 31, 31);
+    width: 100%; /* Adjust the width as needed */
+    border-radius: 1%;
+    /* height: 30vw; */
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* max-width: 900px; */
+    margin: 0 auto;
+}
+
+.gallery {
+    height: 400px; /* Set the height as needed */
+    margin: 5px 5px; /* Adjust margin to add space between images */
+}
+.small {
+    height: 100px;
+    
+}
+.zoom {
+    margin: 5px 5px;
+    transition: all 0.7s ease-in-out;
+
+}
+
+.zoom:hover {
+    cursor: zoom-in;
+    transform: scale(1.1);
+    transition: all 0.7s ease-in-out;
+}
+
+.description {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.description p{
+    text-align: left;
+}
+
+.bold {
+    font-weight: bold;
+}
+.italics {
+    font-style: italic;
+}
+
+.black-section {
+    margin: 0;
+    background-color: rgb(31, 31, 31);
+    color: rgb(218, 218, 218);
+}
+
+/* hover effect for portfolio */
+.img-responsive {
+    object-fit: cover;
+    height: 100%;
+    object-position: center top;
+}
+
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
+
+.hovereffect img {
+    display: inline-block;
+    position: relative;
+    -webkit-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+/* Add the following rule for the zoom-in effect on hover */
+.hovereffect:hover img {
+    transform: scale(1.05);
+}
+
+.info-sub {
+    color:rgb(218, 218, 218);
+    transition: 0.8s;
+    transform: translateY(30%);
+}
+
+.hovereffect a.info-sub {
+    font-size: 1.25vw;
+    overflow: hidden;
+    width: fit-content;
+    color: rgb(218, 218, 218);
+    background-color: transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: 0.8s;
+    position: relative;
+    transform: translateY(30%);
+    padding: 7px;
+    max-width: 70%;
+}
+
+.hovereffect a.info {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    overflow: hidden;
+    width: fit-content;
+    color: rgb(218, 218, 218);
+    border: 1px solid rgb(218, 218, 218);
+    background-color: transparent;
+    opacity: 100;
+    filter: alpha(opacity=0);
+    transition: 0.8s;
+    position: relative;
+    transform: translateY(30%);
+    padding: 7px;
+    max-width: 50%;
+}
+
+.hovereffect a.info:hover {
+    background-color: rgba(218, 218, 218, 0.719);
+    border: 1px solid rgb(22, 22, 22);
+    color: rgb(22, 22, 22);
+}
+
+.hovereffect .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.hovereffect:hover h2,
+.hovereffect:hover a.info,
+.hovereffect:hover a.info-sub {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-transform: translatey(0);
+    -webkit-transform: translatey(0);
+    transform: translatey(0);
+}
