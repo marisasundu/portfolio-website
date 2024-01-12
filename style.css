@@ -154,11 +154,31 @@ footer {
     padding-top: 5px;
     margin: 5px;
     font-style: italic;
+    color: rgb(31, 31, 31);
+    text-decoration: none;
+
+
+}
+@media (max-aspect-ratio: 14/20) {
+    .menu {
+        font-size: 4vw;
+        padding: 0px;
+        margin: 2px;
+    }
+    .gallery {
+        height: 50px;
+    }
+    #selected {
+        /* color: rgb(31, 31, 31); */
+        font-size: 4.5vw;
+        display: block;
+    }
+
 }
 
 a.links {
     text-decoration: none;
-    font-size: 22px;
+    /* font-size: 22px; */
     color: rgb(31, 31, 31);
 }
 /* @media (max-width: 800px) {
@@ -253,6 +273,7 @@ a.socials:hover {
     margin: 0 auto;
     text-align: center;
     padding: 5px;
+    line-height: 150%;
 }
 
 .description p{
