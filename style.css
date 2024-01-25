@@ -14,7 +14,6 @@ body {
     margin: 0px;
 }
 
-
 h1 {
     /* color: rgb(31, 31, 31); */
     font-weight: 200;
@@ -46,6 +45,15 @@ h3 {
 p {
     max-width: 700px;
     margin: 8px
+}
+
+li {
+    text-align: left;
+    margin: 10px;
+}
+
+#title {
+    font-size: 28px;
 }
 
 footer {
@@ -99,6 +107,7 @@ footer {
 .footer-button {
     background: none;
     border: 1px solid black;
+    border-radius: 1%;
     max-width: 100px;
     padding: 8px;
     color: #333; /* Adjust the color as needed */
@@ -159,22 +168,8 @@ footer {
 
 
 }
-@media (max-aspect-ratio: 14/20) {
-    .menu {
-        font-size: 4vw;
-        padding: 0px;
-        margin: 2px;
-    }
-    .gallery {
-        height: 50px;
-    }
-    #selected {
-        /* color: rgb(31, 31, 31); */
-        font-size: 4.5vw;
-        display: block;
-    }
 
-}
+
 
 a.links {
     text-decoration: none;
@@ -249,7 +244,7 @@ a.socials:hover {
 }
 
 .gallery {
-    height: 400px; /* Set the height as needed */
+    height: 350px; /* Set the height as needed */
     margin: 5px 5px; /* Adjust margin to add space between images */
 }
 .small {
@@ -264,7 +259,7 @@ a.socials:hover {
 
 .zoom:hover {
     cursor: zoom-in;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     transition: all 0.7s ease-in-out;
 }
 
@@ -399,4 +394,40 @@ a.socials:hover {
     -ms-transform: translatey(0);
     -webkit-transform: translatey(0);
     transform: translatey(0);
+}
+
+@media only screen and (max-width: 560px) {
+    .menu {
+        font-size: 4vw;
+        padding: 0px;
+        margin: 3px
+    }
+    a.links.menu:hover {
+        font-size: 4.5vw;
+    }
+    .gallery {
+        height: auto;
+        width: 95%; /*fix this */
+    }
+    #selected {
+        /* color: rgb(31, 31, 31); */
+        font-size: 4.5vw;
+        display: block;
+    }
+    #title {
+        font-size: 4.5vw; 
+    }
+    #logo.gallery {
+        margin: 5px;
+        width: 90%;
+        height: auto;
+    }
+
+}
+
+@media only screen and (min-width: 560px) {
+    #logo {
+        height: 250px;
+        width: auto;
+    }
 }
