@@ -18,8 +18,9 @@ h1 {
     /* color: rgb(31, 31, 31); */
     font-weight: 200;
     text-align: left;
-    padding: 10px;
-    margin: 8px;
+    padding: 18px;
+    margin: 0px;
+    background-color: #965959;
 }
 
 h2 {
@@ -36,7 +37,7 @@ h2 {
 h3 {
     font-size: 18px;
     font-weight: 20;
-    max-width: 600px;
+    max-width: 700px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -195,13 +196,13 @@ a.links.menu {
 
 a.links.menu:hover {
     /* color: rgb(31, 31, 31); */
-    font-size: 26px;
+    font-size: 22px;
     display: block;
 }
 
 #selected {
     /* color: rgb(31, 31, 31); */
-    font-size: 26px;
+    font-size: 22px;
     display: block;
 }
 
@@ -427,7 +428,7 @@ a.socials:hover {
 
 @media only screen and (min-width: 560px) {
     #logo {
-        height: 250px;
+        height: 300px;
         width: auto;
     }
 }
