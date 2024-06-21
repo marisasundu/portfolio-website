@@ -14,7 +14,7 @@
                 <p class="menu">/</p>
                 <a class="links menu" href="./about.html">about</a>
                 <p class="menu">/</p>
-                <a class="links menu" href="./portfolio.html" id="selected">work</a>
+                <a class="links menu" href="./work.html" id="selected">work</a>
             </header>
         </h1>
         <!-- <div class="description">
@@ -27,7 +27,7 @@
         
         <div class="container">
 
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/pixel-synthesis/actual-thumbnail.png" alt="">
                     <div class="overlay">
@@ -37,7 +37,7 @@
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/friendship-park/thumbnail.png" alt="">
                     <div class="overlay">
@@ -47,37 +47,37 @@
                 </div>
             </div>
            
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="content/1qualcomm/thumbnail.jpg" alt="">
+                    <img class="img-responsive" src="content/1qualcomm/thumbnail-2.png" alt="">
                     <div class="overlay">
                         <a class="info" href="./vrclassroom.html">virtual reality classroom</a>
-                        <a class="info-sub">Qualcomm Institute | <span class="italics">Interaction Design, Architecture</span></a>
+                        <a class="info-sub">Qualcomm Institute | <span class="italics">Interaction Design, 3D Modeling, Architecture</span></a>
                     </div>
                 </div>
             </div>
     
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/2nyt/nyt-fromfront.jpg" alt="" style="width: 100%;">
                     <div class="overlay">
                         <a class="info" href="./nyt.html">speculative new york times</a>
-                        <a class="info-sub">UC San Diego | <span class="italics">Graphic Design, Prompt Engineering</span></a>
+                        <a class="info-sub">UC San Diego | <span class="italics">InDesign, Graphic Design, Prompt Engineering</span></a>
                     </div>
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="content/3eng/Screenshot.jpg">
+                    <img class="img-responsive" src="content/3eng/projected.jpg" style="width: 100%;">
                     <div class="overlay">
                         <a class="info" href="./cycleofobjects.html">life cycle of objects</a>
-                        <a class="info-sub">High Tech Elementary | <span class="italics">Interaction Design, Design Research</span></a>
+                        <a class="info-sub">High Tech Elementary | <span class="italics">Interaction Design, JavaScript, Design Research</span></a>
                     </div>
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/7graphic/ZineCover.png" alt="">
                     <div class="overlay">
@@ -93,7 +93,7 @@
         </h2>
 
         <div class="container">
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/4upcycle/spiky.jpg" alt="">
                     <div class="overlay">
@@ -103,7 +103,7 @@
                 </div>
             </div>
     
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/5ttt/lisa1.jpeg" alt="" style="width: 100%;">
                     <div class="overlay">
@@ -113,7 +113,7 @@
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/6jewelry/bris.jpg" alt="">
                     <div class="overlay">
@@ -125,7 +125,7 @@
 
             
 
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/3D/RisaSundu_LampDesignSide.jpg" alt="" style="right: 0px;">
                     <div class="overlay">
@@ -135,7 +135,7 @@
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/8fashion/dresstie.jpg" alt="" style="width: 100%;">
                     <div class="overlay">
@@ -145,7 +145,7 @@
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/9printmaking/nametag-final.jpg" alt="" style="width: 100%;">
                     <div class="overlay">
@@ -155,7 +155,7 @@
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/10doodles/thumbnail-plant.png" alt="" style="width: 100%;">
                     <div class="overlay">
@@ -165,7 +165,7 @@
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/websiteevolution/tumbnailme.jpg" alt="" style="right: 0px;">
                     <div class="overlay">
@@ -176,7 +176,31 @@
             </div>
 
         </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Select all .item elements
+                var items = document.querySelectorAll('.item');
+            
+                // Loop through each .item element
+                items.forEach(function(item) {
+                    // Add click event listener to each .item element
+                    item.addEventListener('click', function() {
+                        // Find the .info link inside this .item element
+                        var link = this.querySelector('.info');
+            
+                        // Get the href attribute of the .info link
+                        var href = link.getAttribute('href');
+            
+                        // Navigate to the href location
+                        window.location.href = href;
+                    });
+                });
+            });
+        </script>
+
     </body>
+
  <br> 
  <br>
     <footer>
