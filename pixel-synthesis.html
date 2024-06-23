@@ -25,26 +25,49 @@
         <h2>* pixel synthesis *</h2>
 
         <h3><span class="bold">Skills: </span>Interaction Design, Electronics Prototyping, Serial Communication</h3>
-        <h3><span class="bold">Tools: </span>Arduino, Java, Makey Makey</h3>
+        <h3><span class="bold">Tools: </span>Arduino (C++), Processing (Java), Makey Makey</h3>
+        <h3><span class="bold">Collaborator: </span>David Shin</h3>
 
         <div class="description">
-            <p>How can art and technology be leveraged to encourage people to interact with one another?</p>
+            <p>How we can encourage human collaboration through our design of technological & artistic interfaces? In <i>Pixel Synthesis</i>, participants must coordinate their behavior in order to unlock new features of the display, opening new channels for embodied human-human-computer interaction.</p>
         </div>
 
         <div class="gallery-container"> 
             <iframe width="700" height="400" src="https://www.youtube-nocookie.com/embed/4lRV7BkGqqE?si=02BPCvys357omjjc&autoplay=1&mute=1&rel-0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
+        <div class="description">
+            <p>Participants each wear a glove with conductive finger pads, connected to a circuit board and computer. If the participants aren't touching, the LED display flashes randomly in a rainbow of colors. Once the participants start to work together, the lights coalesce into delightful patterns.</p>
+            <p>Depending on which two fingers they touch, new animations reveal themselves: pixels of light bounce against the boundaries of the display, or face tracking activates and becomes a reflection of the pair.</p>
+            <p>As the two familiarize with each other and the interface, the lights respond, highlighting moments of human connection in an infinitely random universe.</p>
+        </div>
+
         <div class="gallery-container">
             <img class="gallery" src="content/pixel-synthesis/function-example.png">
+        </div>
+
+        <div class="gallery-container">
+            <img class="gallery" src="content/pixel-synthesis/glove-left.jpeg">
+            <img class="gallery" src="content/pixel-synthesis/glove-center.jpeg">
+            <img class="gallery" src="content/pixel-synthesis/glove-right.jpeg">
         </div>
         
         <br>
         <div class="black-section">
             <br>
             <h2>- process -</h2>
+            <h3><i>the technical bits</i></h3>
             <div class="description">
-                <p>In February 2024, I hosted a printmaking workshop at the EnVision Arts and Engineering Maker Studio where I work. Over 20 people came and learned to linocut, making their own Valentine's Day cards for their loved ones.</p>
+                <p>Makey Makey is a circuit board which allows you to transform everyday objects into input devices for your computer. In the image below, a fork, carabiner, key, and wallet become buttons for up, down, left, and right, functioning as inputs for a <a href="https://editor.p5js.org/msundu/sketches/jUdD5bcZ6" class="socials" style="color: rgb(218,218,218);">colorful etch-a-sketch program</a> I wrote as I learned to use Makey Makey.</p>
+                <!-- <p>add: why we chose processing, connecting processing to arduino, connecting processing to LED (grid system), timing/baud rate & refresh rate issues, etc</p> -->
+            </div>
+
+            <div class="gallery-container">
+                <img class="gallery" src="content/pixel-synthesis/makeymakey.jpeg">
+            </div>
+
+            <div class="description">
+                <p>It took 3 tries to find a microcontroller that was compatible with both the LED pixel library and Processing's serial communication library.</p>
             </div>
 
             <div class="gallery-container">
@@ -52,7 +75,7 @@
             </div>
 
             <div class="description">
-                <p>I love bringing more creatives and artists into this traditionally engineering-oriented space, or introducing craft to otherwise STEM-oriented students.</p>
+                <p>As you interact, you will become “synthesized” and “synchronized” with both the other user and the technology through intuitive, playful physical touch.</p>
             </div>
             <br>
         </div>
@@ -71,9 +94,9 @@
             <span>this website was handmade with love in La Jolla, CA</span>
         </div>
 
-        <a href="./doodles.html">
+        <a href="./friendship-park.html">
             <button class="footer-button next">
-                Next: Doodles
+                Next: Friendship Park
             </button>
         </a>
     </footer>
