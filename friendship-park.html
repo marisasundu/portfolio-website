@@ -7,10 +7,12 @@
         <link rel="icon" href="content/favicon.png">
         <title>Risa Sundu</title>
 
-        <style>
+        <!-- <style>
             /* bc so many images have white background */
             html {background-color: white;} 
-        </style>
+        </style> -->
+
+        <link href="lightbox/lightbox2-2.11.4/dist/css/lightbox.css" rel="stylesheet" />
         <!-- <script src="jquery-3.6.1.js"></script> -->
     </head>
 
@@ -32,24 +34,44 @@
         <h3><span class="bold">Skills: </span>Urban Design, Conceptual Architectural Visualization</h3>
         <h3><span class="bold">Tools: </span>Illustrator, Photoshop, Inkscape</h3>
 
+        <div class="gallery-container">
+            <img class="gallery" src="content/friendship-park/otherme.png" style="width: 60%; height: auto;">
+        </div>
+
         <div class="description">
             <p>What does a border wall mean to the ocean? What does it mean to a bird, an insect, or a bear? The U.S.-Mexico border region between San Diego and Tijuana at Friendship Park is but a pixel in the mosaic of the borderlands, but one which stands out in its urban and environmental contradictions.</p>
+            <p>This exploratory set of diagrams and visualizations lays out a compendium of strategic speculative positions from which we might reimagine the prototypical one-dimensional reading of this space.</p>
         </div>
 
         <div class="gallery-container">
-            <img class="gallery" src="content/friendship-park/thumbnail.png">
-        </div>
-
-        <div class="gallery-container">
-            <img class="gallery" src="content/friendship-park/animation.gif">
-        </div>
-        
-        <!-- <div style="display: flex; justify-content: center;">  -->
-        <div class="gallery-container">
+            <a href="content/friendship-park/circles.png" data-lightbox="gallery" data-title="contrasting urban textures of adjacent neighborhoods on either side of the international border"><img class="gallery zoom" src="content/friendship-park/circles.png"></a>
+            <a href="content/friendship-park/thumbnail.png" data-lightbox="gallery" data-title="envisioning community connection through strategic binational engagement"><img class="gallery zoom" src="content/friendship-park/thumbnail.png"></a>
+            <a href="content/friendship-park/animation.gif" data-lightbox="gallery" data-title="imagine an intermeshing of urban & rural through a more porous threshold"><img class="gallery zoom" src="content/friendship-park/animation.gif"></a>
+            <a href="content/friendship-park/topo-wall.png" data-lightbox="gallery" data-title="what if we used the logics of the wetlands to design our border region?"><img class="gallery zoom" src="content/friendship-park/topo-wall.png"></a>
+            <a href="content/friendship-park/engage.png" data-lightbox="gallery" data-title="at friendship park, various forces contradict to magnetically attract & repel people"><img class="gallery zoom" src="content/friendship-park/engage.png"></a>
+            <a href="content/friendship-park/meeting-boxes.png" data-lightbox="gallery" data-title="what if the border zone became a place where two estranged communities could rediscover each other?"><img class="gallery zoom" src="content/friendship-park/meeting-boxes.png"></a>
+            <a href="content/friendship-park/projected-circles.png" data-lightbox="gallery" data-title="rather than strictly segmenting uses, this region would thrive through a gradient of functionality"><img class="gallery zoom" src="content/friendship-park/projected-circles.png"></a>
             
         </div>
-        
         <br>
+
+        <div class="description">
+            <p style="text-align: center;"><i>[this project's documentation is a work in progress, thanks for visiting :)]</i></p>
+        </div>
+
+        <script src="lightbox/lightbox2-2.11.4/dist/js/lightbox-plus-jquery.js"></script>
+        <script>
+            lightbox.option({
+              'resizeDuration': 0,
+              'wrapAround': true,
+              'imageFadeDuration': 250,
+              'fitImagesInViewport': true
+            })
+        </script>
+
+        
+        <!-- <div style="display: flex; justify-content: center;">  -->
+        
 
     </body>
 
