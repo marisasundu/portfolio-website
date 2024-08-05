@@ -7,7 +7,7 @@
         <title>Risa Sundu</title>
     </head>
     <body>
-        <h1 id="main-menu">
+        <!-- <h1 id="main-menu">
             <header>
                 <a class="links" id="title" href="/">risa sundu</a>
                 <a class="links menu" href="./contact.html">contact</a>
@@ -16,10 +16,23 @@
                 <p class="menu">/</p>
                 <a class="links menu" href="./work.html" id="selected">work</a>
             </header>
-        </h1>
+            
+        </h1> -->
+        <header class="fixed-header">
+            <nav>
+                <ul>
+                    <li style="font-weight: 400;"><a href="/">risa sundu</a></li>
+                    <li><a href="./work.html">work</a></li>
+                    <li><a href="./about.html">about</a></li>
+                    <li><a href="./contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </header>
         <!-- <div class="description">
             <p>Here you can peruse some of my recent creations. Feel free to <a href=./contact.html class="socials" style="text-decoration: none;">reach out</a> if you'd like to learn more about any of my projects.</p>
         </div> -->
+        <br>
+        <br>
         <br>
         <h2>
             <a>- PORTFOLIO -</a>
@@ -27,9 +40,9 @@
         
         <div class="container">
 
-            <div class="item" onclick="navigateToLink()">
+            <div class="item" onclick="navigateToLink()" style="grid-column: span 2; grid-row: span 1; aspect-ratio: 2;">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="content/pixel-synthesis/actual-thumbnail.png" alt="">
+                    <img class="img-responsive" src="content/pixel-synthesis/actual-thumbnail.png" alt="" style="width: 100%; object-position:top -60px right 0">
                     <div class="overlay">
                         <a class="info" href="./pixel-synthesis.html">pixel synthesis</a>
                         <a class="info-sub"><span class="italics">Arduino, Java, Makey Makey</span></a>
@@ -37,32 +50,13 @@
                 </div>
             </div>
 
-            <div class="item" onclick="navigateToLink()">
-                <div class="hovereffect">
-                    <img class="img-responsive" src="content/friendship-park/thumbnail.png" alt="">
-                    <div class="overlay">
-                        <a class="info" href="./friendship-park.html">friendship park</a>
-                        <a class="info-sub"><span class="italics">Illustrator, Photoshop, Inkscape</span></a>
-                    </div>
-                </div>
-            </div>
            
             <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/1qualcomm/thumbnail-2.png" alt="">
                     <div class="overlay">
                         <a class="info" href="./vrclassroom.html">virtual reality classroom</a>
-                        <a class="info-sub">Qualcomm Institute | <span class="italics">Interaction Design, 3D Modeling, Architecture</span></a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="item" onclick="navigateToLink()">
-                <div class="hovereffect">
-                    <img class="img-responsive" src="content/2nyt/nyt-fromfront.jpg" alt="" style="width: 100%;">
-                    <div class="overlay">
-                        <a class="info" href="./nyt.html">speculative new york times</a>
-                        <a class="info-sub"><span class="italics">InDesign, Graphic Design, Prompt Engineering</span></a>
+                        <a class="info-sub">Qualcomm Institute | <span class="italics">Interaction Design, 3D Modeling, VR</span></a>
                     </div>
                 </div>
             </div>
@@ -77,15 +71,17 @@
                 </div>
             </div>
 
-            <div class="item" onclick="navigateToLink()">
+            <div class="item" onclick="navigateToLink()" style="grid-column: span 2; grid-row: span 1; aspect-ratio: 2;">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="content/7graphic/ZineCover.png" alt="">
+                    <img class="img-responsive" src="content/friendship-park/thumbnail2.png" alt="" style="width: 100%; object-position: 50% 50%;">
                     <div class="overlay">
-                        <a class="info" href="./graphic-design.html">graphic design</a>
-                        <a class="info-sub"><span class="italics">Illustrator, InDesign, Photoshop</span></a>
+                        <a class="info" href="./friendship-park.html">friendship park</a>
+                        <a class="info-sub"><span class="italics">Illustrator, Photoshop, Inkscape</span></a>
                     </div>
                 </div>
             </div>
+
+            
         </div>
         <br>
         <h2>
@@ -93,6 +89,8 @@
         </h2>
 
         <div class="container">
+
+            
             <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/4upcycle/spiky.jpg" alt="">
@@ -102,7 +100,7 @@
                     </div>
                 </div>
             </div>
-    
+            
             <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/5ttt/lisa1.jpeg" alt="" style="width: 100%;">
@@ -112,8 +110,27 @@
                     </div>
                 </div>
             </div>
+            <div class="item" onclick="navigateToLink()" style="grid-column: span 1; grid-row: span 2; aspect-ratio: .5;">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="content/2nyt/nyt-fromfront.jpg" alt="" style="height: 100%; object-position: top 0 right -100px;">
+                    <div class="overlay">
+                        <a class="info" href="./nyt.html">speculative new york times</a>
+                        <a class="info-sub"><span class="italics">InDesign, Graphic Design, Prompt Engineering</span></a>
+                    </div>
+                </div>
+            </div>
 
             <div class="item" onclick="navigateToLink()">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="content/7graphic/ZineCover.png" alt="">
+                    <div class="overlay">
+                        <a class="info" href="./graphic-design.html">graphic design</a>
+                        <a class="info-sub"><span class="italics">Illustrator, InDesign, Photoshop</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item" onclick="navigateToLink()" style="grid-column: 3/span 1; grid-row:1/span 2; aspect-ratio: .5;">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/6jewelry/bris.jpg" alt="">
                     <div class="overlay">
@@ -122,8 +139,6 @@
                     </div>
                 </div>
             </div>
-
-            
 
             <div class="item" onclick="navigateToLink()">
                 <div class="hovereffect">
@@ -140,7 +155,7 @@
                     <img class="img-responsive" src="content/8fashion/dresstie.jpg" alt="" style="width: 100%;">
                     <div class="overlay">
                         <a class="info" href="./fashion-design.html">fashion design</a>
-                        <a class="info-sub"><span class="italics">Sewing, Design Conceptualization</span></a>
+                        <a class="info-sub"><span class="italics">Sewing, Pattern Making</span></a>
                     </div>
                 </div>
             </div>
@@ -165,7 +180,7 @@
                 </div>
             </div>
 
-            <div class="item" onclick="navigateToLink()">
+            <div class="item" onclick="navigateToLink()" >
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/websiteevolution/tumbnailme.jpg" alt="" style="right: 0px;">
                     <div class="overlay">
@@ -201,7 +216,6 @@
 
     </body>
 
- <br> 
  <br>
     <footer>
         <div class="footer-content">
