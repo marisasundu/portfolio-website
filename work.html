@@ -22,7 +22,7 @@
             <nav>
                 <ul>
                     <li style="font-weight: 400;"><a href="/">risa sundu</a></li>
-                    <li><a href="./work.html">work</a></li>
+                    <li ><a id="header-selected" href="./work.html">work</a></li>
                     <li><a href="./about.html">about</a></li>
                     <li><a href="./contact.html">contact</a></li>
                 </ul>
@@ -38,12 +38,35 @@
         <h2>
             <a>- PORTFOLIO -</a>
         </h2>
-        
+
+        <h2>
+            <text class="italics" style="font-size: 20px;">select tags to filter:</text>
+        </h2>
+
+        <div class="filters">
+            <text>theme</text>
+            <button class="filter-button" data-filter="interaction">interaction</button>
+            <text>*</text>
+            <button class="filter-button" data-filter="graphic">graphic</button>
+            <text>*</text>
+            <button class="filter-button" data-filter="urban">urban</button>
+            <text>*</text>
+            <button class="filter-button" data-filter="physical">physical</button>
+        </div>
+        <div class="filters"> 
+            <text>purpose</text>
+            <button class="filter-button" data-filter="client">client</button>
+            <text>*</text>
+            <button class="filter-button" data-filter="class">class</button>
+            <text>*</text>
+            <button class="filter-button" data-filter="personal">personal</button>
+        </div>
+        <br>
         <div class="container">
 
-            <div class="item" onclick="navigateToLink()" style="grid-column: span 2; grid-row: span 2; height: 100%;">
+            <div class="item interaction physical class" onclick="navigateToLink()" style="grid-column: span 2; grid-row: span 1; aspect-ratio: 2.006;">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="content/pixel-synthesis/actual-thumbnail.png" alt="" >
+                    <img class="img-responsive" src="content/pixel-synthesis/actual-thumbnail.png" alt="" style="width: 100%; object-position: top -60px right 0;" >
                     <div class="overlay">
                         <a class="info" href="./pixel-synthesis.html">pixel synthesis</a>
                         <a class="info-sub"><span class="italics">Arduino, Java, Makey Makey</span></a>
@@ -51,8 +74,17 @@
                 </div>
             </div>
 
+            <div class="item graphic class" onclick="navigateToLink()" style="grid-column: span 1; grid-row: span 2; aspect-ratio: .4985;">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="content/2nyt/nyt-fromfront.jpg" alt="" style="height: 100%; object-position: top 0 right -100px;">
+                    <div class="overlay">
+                        <a class="info" href="./nyt.html">speculative new york times</a>
+                        <a class="info-sub"><span class="italics">InDesign, Graphic Design, Prompt Engineering</span></a>
+                    </div>
+                </div>
+            </div>
            
-            <div class="item" onclick="navigateToLink()">
+            <div class="item interaction client" onclick="navigateToLink()" >
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/1qualcomm/thumbnail-2.png" alt="">
                     <div class="overlay">
@@ -62,17 +94,7 @@
                 </div>
             </div>
 
-            <div class="item" onclick="navigateToLink()">
-                <div class="hovereffect">
-                    <img class="img-responsive" src="content/3eng/projected.jpg" style="width: 100%;">
-                    <div class="overlay">
-                        <a class="info" href="./cycleofobjects.html">life cycle of objects</a>
-                        <a class="info-sub">High Tech Elementary | <span class="italics">Interaction Design, JavaScript, Design Research</span></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item" onclick="navigateToLink()" style="grid-column: span 2; grid-row: span 1; aspect-ratio: 2.006;">
+            <div class="item urban class" onclick="navigateToLink()" style="grid-column: span 2; grid-row: span 1; aspect-ratio: 2.006;">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/friendship-park/thumbnail2.png" alt="" style="width: 100%; object-position: 50% 50%;">
                     <div class="overlay">
@@ -82,6 +104,15 @@
                 </div>
             </div>
 
+            <div class="item interaction physical class client" onclick="navigateToLink()">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="content/3eng/projected.jpg" style="width: 100%;">
+                    <div class="overlay">
+                        <a class="info" href="./cycleofobjects.html">life cycle of objects</a>
+                        <a class="info-sub">High Tech Elementary | <span class="italics">Interaction Design, JavaScript, Design Research</span></a>
+                    </div>
+                </div>
+            </div>
             
         <!-- </div> -->
         <!-- <br>
@@ -92,7 +123,7 @@
         <!-- <div class="container"> -->
 
             
-            <div class="item" onclick="navigateToLink()">
+            <div class="item physical personal" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/4upcycle/spiky.jpg" alt="">
                     <div class="overlay">
@@ -102,7 +133,7 @@
                 </div>
             </div>
             
-            <div class="item" onclick="navigateToLink()">
+            <div class="item interaction physical personal" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/5ttt/lisa1.jpeg" alt="" style="width: 100%;">
                     <div class="overlay">
@@ -111,17 +142,8 @@
                     </div>
                 </div>
             </div>
-            <div class="item" onclick="navigateToLink()" style="grid-column: span 1; grid-row: span 2; aspect-ratio: .4985;">
-                <div class="hovereffect">
-                    <img class="img-responsive" src="content/2nyt/nyt-fromfront.jpg" alt="" style="height: 100%; object-position: top 0 right -100px;">
-                    <div class="overlay">
-                        <a class="info" href="./nyt.html">speculative new york times</a>
-                        <a class="info-sub"><span class="italics">InDesign, Graphic Design, Prompt Engineering</span></a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="item" onclick="navigateToLink()">
+            <div class="item graphic personal client" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/7graphic/ZineCover.png" alt="">
                     <div class="overlay">
@@ -131,7 +153,7 @@
                 </div>
             </div>
 
-            <div class="item" onclick="navigateToLink()" style="grid-column: 3/span 1; grid-row:1/span 2; aspect-ratio: .4985;">
+            <div class="item physical personal" onclick="navigateToLink()" style="grid-column: span 1; grid-row:span 2; aspect-ratio: .4985;">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/6jewelry/bris.jpg" alt="">
                     <div class="overlay">
@@ -141,7 +163,7 @@
                 </div>
             </div>
 
-            <div class="item" onclick="navigateToLink()">
+            <div class="item class personal" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/3D/RisaSundu_LampDesignSide.jpg" alt="" style="right: 0px;">
                     <div class="overlay">
@@ -151,9 +173,9 @@
                 </div>
             </div>
 
-            <div class="item" onclick="navigateToLink()">
+            <div class="item physical personal" onclick="navigateToLink()" style="grid-column: span 2; grid-row: span 1; aspect-ratio: 2.006;">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="content/8fashion/dresstie.jpg" alt="" style="width: 100%;">
+                    <img class="img-responsive" src="content/8fashion/dresstie.jpg" alt="" style="width: 100%; object-position: top -350px right 0;">
                     <div class="overlay">
                         <a class="info" href="./fashion-design.html">fashion design</a>
                         <a class="info-sub"><span class="italics">Sewing, Pattern Making</span></a>
@@ -161,7 +183,7 @@
                 </div>
             </div>
 
-            <div class="item" onclick="navigateToLink()">
+            <div class="item graphic physical personal" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/9printmaking/nametag-final.jpg" alt="" style="width: 100%;">
                     <div class="overlay">
@@ -171,7 +193,7 @@
                 </div>
             </div>
 
-            <div class="item" onclick="navigateToLink()">
+            <div class="item graphic physical personal" onclick="navigateToLink()">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/10doodles/thumbnail-plant.png" alt="" style="width: 100%;">
                     <div class="overlay">
@@ -181,9 +203,9 @@
                 </div>
             </div>
 
-            <div class="item" onclick="navigateToLink()" >
+            <div class="item interaction personal" onclick="navigateToLink()" style="grid-column: span 2; grid-row: span 1; aspect-ratio: 2.006;">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="content/websiteevolution/tumbnailme.jpg" alt="" style="right: 0px;">
+                    <img class="img-responsive" src="content/websiteevolution/tumbnailme.jpg" alt="" style="right: 0px; width: 100%;">
                     <div class="overlay">
                         <a class="info" href="./websiteevolution.html">website evolution</a>
                         <a class="info-sub"><span class="italics">HTML/CSS, JavaScript, AWS, Git</span></a>
@@ -213,6 +235,45 @@
                     });
                 });
             });
+
+            // scripts.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const projectItems = document.querySelectorAll('.item');
+    let activeFilters = [];
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+
+            // Toggle the selected class on the button
+            if (button.classList.contains('selected')) {
+                button.classList.remove('selected');
+                // Remove the filter from the active filters array
+                activeFilters = activeFilters.filter(f => f !== filter);
+            } else {
+                button.classList.add('selected');
+                // Add the filter to the active filters array
+                activeFilters.push(filter);
+            }
+
+            // Update the project items display based on active filters
+            projectItems.forEach(item => {
+                // Check if the item matches all active filters
+                const isMatch = activeFilters.every(filter => item.classList.contains(filter));
+
+                // If all filters match or no filters are active, show the item, otherwise hide it
+                if (isMatch || activeFilters.length === 0) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    });
+});
+
         </script>
 
     </body>
