@@ -537,10 +537,10 @@ main {
 }
 
 .filter-button {
-    padding: 10px 20px;
+    padding: 1vw 2vw;
     /* position: center; */
     font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-size: 2.2vw;
     font-weight: 300;
     margin: 10px;
     border: none;
@@ -553,14 +553,14 @@ main {
 
 .filter-button:hover {
     background-color: rgba(175, 171, 171, 0.645);
-    font-size: 21px;
+    font-size: 2.4vw;
     transition: 0.8s;
 }
 
 .filter-button.selected {
     background-color: rgb(31, 31, 31);
     color: rgb(218, 218, 218);
-    font-size: 21px;
+    font-size: 2.4vw;
 }
 /* .filter-button.selected:hover {
     background-color: rgb(218, 218, 218);
