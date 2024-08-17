@@ -418,43 +418,6 @@ a.socials:hover {
     transform: translatey(0);
 }
 
-@media only screen and (max-width: 560px) {
-    .menu {
-        font-size: 4vw;
-        padding: 0px;
-        margin: 3px
-    }
-    a.links.menu:hover {
-        font-size: 4.5vw;
-    }
-    .gallery {
-        height: auto;
-        width: 95%; /*fix this */
-    }
-    #selected {
-        /* color: rgb(31, 31, 31); */
-        font-size: 4.5vw;
-        display: block;
-    }
-    #title {
-        font-size: 4.5vw; 
-    }
-    #logo.gallery {
-        margin: 5px;
-        width: 90%;
-        height: auto;
-    }
-
-}
-
-@media only screen and (min-width: 560px) {
-    #logo {
-        height: 300px;
-        width: auto;
-    }
-}
-
-
 .fixed-header {
     position: fixed;
     background-color: rgb(218,218,218);
@@ -537,10 +500,10 @@ main {
 }
 
 .filter-button {
-    padding: 1vw 2vw;
+    padding: 10px;
     /* position: center; */
     font-family: "Roboto", sans-serif;
-    font-size: 2.2vw;
+    font-size: 20px;
     font-weight: 300;
     margin: 10px;
     border: none;
@@ -553,14 +516,14 @@ main {
 
 .filter-button:hover {
     background-color: rgba(175, 171, 171, 0.645);
-    font-size: 2.4vw;
+    font-size: 21px;
     transition: 0.8s;
 }
 
 .filter-button.selected {
     background-color: rgb(31, 31, 31);
     color: rgb(218, 218, 218);
-    font-size: 2.4vw;
+    font-size: 18px;
 }
 /* .filter-button.selected:hover {
     background-color: rgb(218, 218, 218);
@@ -568,3 +531,71 @@ main {
     transition: 0.8s;
 } */
 
+@media only screen and (max-width: 560px) {
+    .menu {
+        font-size: 4vw;
+        padding: 0px;
+        margin: 3px
+    }
+    a.links.menu:hover {
+        font-size: 4.5vw;
+    }
+    .gallery {
+        height: auto;
+        width: 95%; /*fix this */
+    }
+    .hovereffect a.info{
+        font-size: 1.8vh;
+    }
+    .hovereffect a.info-sub{
+        font-size: 1.5vh;
+    }
+    #selected {
+        /* color: rgb(31, 31, 31); */
+        font-size: 4.5vw;
+        display: block;
+    }
+    #title {
+        font-size: 4.5vw; 
+    }
+    #logo.gallery {
+        margin: 5px;
+        width: 90%;
+        height: auto;
+    }
+    .filter-button {
+        font-size: 14px;
+        padding: 6px;
+        margin: 8px;
+    }
+    .filter-button:hover{
+        font-size: 14px;
+        /* background-color: rgb(218, 218, 218);
+        color: rgb(31, 31, 31); */
+    }
+    .filter-button.selected {
+        font-size: 12px;
+    }
+    .fixed-header a{
+        font-size: 16px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(10%,1fr));
+        gap: 2px;
+        margin: 2px;
+    }
+    .filters text{
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (min-width: 560px) {
+    #logo {
+        height: 300px;
+        width: auto;
+    }
+    
+}
