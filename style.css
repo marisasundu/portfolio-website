@@ -37,17 +37,17 @@ h2 {
     font-size: 26px;
     font-weight: 300;
     /* padding: 14px 7px; */
-    max-width: 700px;
+    max-width: 800px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
 h3 {
-    font-size: 16=8px;
+    /* font-size: 16px; */
     font-weight: 300;
-    max-width: 700px;
-    text-align: left;
+    max-width: 800px;
+    text-align: center;
     margin: 0 auto;
     padding: 8px;
 
@@ -60,7 +60,7 @@ h3 {
 }
 
 p {
-    max-width: 700px;
+    max-width: 800px;
     margin: 8px
 }
 
@@ -287,7 +287,7 @@ a.socials:hover {
 }
 
 .description {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     text-align: center;
     padding: 5px;
@@ -531,6 +531,7 @@ main {
     transition: 0.8s;
 } */
 
+
 @media only screen and (max-width: 560px) {
     .menu {
         font-size: 4vw;
@@ -589,7 +590,6 @@ main {
     .filters text{
         font-size: 12px;
     }
-
 }
 
 @media only screen and (min-width: 560px) {
@@ -597,5 +597,30 @@ main {
         height: 300px;
         width: auto;
     }
-    
+}
+
+@media only screen and (min-width: 1050px) {
+    .grid-layout{
+        display: grid;
+        grid-template-columns: 1fr 3fr 3fr 1fr; /* Adjust these fractions to control the text-to-image width ratio */
+        /* grid-template-rows: repeat(auto-fill,200px); */
+        gap: 20px;
+        /* justify-content: center;
+        align-items: center; */
+        place-items: center;
+    }
+    /* .grid-item{
+        display: grid;
+        place-items: center;
+    } */
+    .left {
+        display: grid;
+        grid-column: 2;
+        place-items: center;
+    }
+    .right {
+        display: grid;
+        grid-column: 3;
+        place-items: center;
+    }
 }
