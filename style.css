@@ -616,7 +616,7 @@ main {
     .left {
         display: grid;
         grid-column: 2;
-        place-items: center;
+        place-items: left;
     }
     .right {
         display: grid;
