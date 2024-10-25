@@ -306,6 +306,11 @@ a.socials:hover {
     font-style: italic;
 }
 
+.subsection {
+    font-weight: 400;
+    font-size: 22px;
+}
+
 .black-section {
     margin: 0;
     background-color: rgb(31, 31, 31);
