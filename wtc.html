@@ -1,43 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link href = "./style.css" rel = "stylesheet">
-        <link href="lightbox/lightbox2-2.11.4/dist/css/lightbox.css" rel="stylesheet" />
-
-        <link rel="icon" href="content/favicon.png">
-        <title>Risa Sundu</title>
-        <!-- <script src="jquery-3.6.1.js"></script> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+        <script>
+            // Fetch head.html and append its content to the document head
+            fetch('head.html')
+              .then(response => response.text())
+              .then(data => {
+                 // Insert the fetched head content before any existing head elements
+                 // (Or replace the head's innerHTML if you want a complete override)
+                 document.head.innerHTML += data;
+              })
+              .catch(error => console.error('Error loading head:', error));
+          </script>
     </head>
 
     <body>
-        <!-- <h1 id="main-menu">
-            <header>
-                <a class="links" id="title" href="/">risa sundu</a>
-                <a class="links menu" href="./contact.html">contact</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./about.html">about</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./work.html">work</a>
-            </header>
-        </h1> -->
-        <header class="fixed-header">
-            <nav>
-                <ul>
-                    <li style="font-weight: 400;"><a href="/">risa sundu</a></li>
-                    <li><a href="./work.html">work</a></li>
-                    <li><a href="./about.html">about</a></li>
-                    <li><a href="./contact.html">contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <br>
-        <br>
-        <br>
-
-        <br>
+        <div id="header"></div>
         <h2>* world trade center: placemaking internship *</h2>
 
         <h3><span class="bold">Skills: </span>Urban Design | Rhino | Photoshop</h3>
@@ -47,35 +28,136 @@
         <br>
         
         <div class="description">
-            <p>I spent Summer 2024 in New York City as an intern in the World Trade Center Department of the Port Authority of New York and New Jersey.</p>
-            <p>My contributions spanned a range of projects, and some highlights are showcased below.</p>
+            <p>I spent the summer of 2024 in New York City as a design intern in the World Trade Center Department of the Port Authority of New York and New Jersey.</p>
+            <p>My contributions spanned a range of urban design and placemaking projects, finding creative ways to re-activate exisiting infrastructure to better serve the public.</p>
+            <p>Some highlights are showcased here.</p>
+        </div>
+
+        <div class="description">
+            <p>Jump to: <a href=#bollard class="socials">bollard bench</a> | <a href=#plaza class="socials">plaza placemaking</a> | <a href=#flagpole-furniture class="socials">flagpole furniture</a></p>
+            <!-- add  | interactive installation if common threads happens -->
         </div>
 
         <br>
 
+        <div class="description anchor-target" id="bollard">
+            <p class="subsection">bollard bench add-on</p>
+        </div>
+
+        <div class="gallery-container">
+            <a href="content/worldtradecenter/installation-view.png" class="glightbox" data-gallery="bollard" data-title=""><img class="gallery zoom" src="content/worldtradecenter/installation-view.png"></a>
+        </div>
+        
         <div class="description">
-            <p class="subsection">~ bollard bench add-on</p>
+            <p>The World Trade Center site is surrounded by hundreds of security bollards, lining every sidewalk and road.</p>
+            <p>From delivery drivers to tourist families, each visitor has different needs and desires of the site. I conducted observational field research and was struck by the creativity and ingenuity of the public's solutions for these simple bollards.</p>
+        </div>
+
+        <div class="gallery-container">
+            <a href="content/worldtradecenter/delivery-bollard.jpg" class="glightbox" data-gallery="bollard" data-title="Bollard becomes a surface to set items on"><img class="gallery zoom" src="content/worldtradecenter/delivery-bollard.jpg"></a>
+            <a href="content/worldtradecenter/eating-bollard.jpg" class="glightbox" data-gallery="bollard" data-title="Bollard becomes a table to eat upon"><img class="gallery zoom" src="content/worldtradecenter/eating-bollard.jpg"></a>
+            <a href="content/worldtradecenter/sitting-bollard.jpg" class="glightbox" data-gallery="bollard" data-title="Bollard becomes a chair, albeit a tall one for some"><img class="gallery zoom" src="content/worldtradecenter/sitting-bollard.jpg"></a>
         </div>
 
         <div class="description">
-            <p class="subsection">~ linear flagpole bench set</p>
+            <p>How can these informal interactions with public space become the foundation for an intervention that enhances the functionality of the infrastructure? Based on these insights, I began by creating a series of divergent iterations to get a sense of what approach I wanted to take.</p>
+        </div>
+
+        <div class="gallery-container">
+            <a href="content/worldtradecenter/bench-on-bollard.png" class="glightbox" data-gallery="bollard" data-title=""><img class="gallery zoom" style="height: 200px;" src="content/worldtradecenter/bench-on-bollard.png"></a>
+            <a href="content/worldtradecenter/chair-on-bollard.png" class="glightbox" data-gallery="bollard" data-title=""><img class="gallery zoom" style="height: 200px;" src="content/worldtradecenter/chair-on-bollard.png"></a>
+            <a href="content/worldtradecenter/table-chair.png" class="glightbox" data-gallery="bollard" data-title=""><img class="gallery zoom" style="height: 200px;" src="content/worldtradecenter/table-chair.png"></a>
         </div>
 
         <div class="description">
-            <p class="subsection">~ litte greenwich plaza placemaking</p>
+            <p>Then, I narrowed in on one design concept and developed dozens of aesthetic and functional variations. I created prototypes with paper, which helped assess the stability and feel of each design.</p>
+        </div>
+        <div class="gallery-container">
+            <a href="content/worldtradecenter/paper-models.jpg" class="glightbox" data-gallery="bollard" data-title=""><img class="gallery zoom" style="width: 800px; height: auto;" src="content/worldtradecenter/paper-models.jpg"></a>
         </div>
 
+        <div class="description">
+            <p>Incorporating feedback from the Security, Operations, Customer Experience, and Planning teams, I refined this custom multi-functional bench & table with a delicate structural system that aligns with the existing modern and sleek aesthetic of the site while adhering to security requirements.</p>
+        </div>
+
+        <div class="gallery-container">
+            <a href="content/worldtradecenter/fulton-context.png" class="glightbox" data-gallery="bollard" data-title=""><img class="gallery zoom" src="content/worldtradecenter/fulton-context.png"></a>
+        </div>
+
+        <div class="description">
+            <p>Finally, I developed a set of fabrication drawings which were sent to a contractor to eventually prototype!</p>
+        </div>
+
+        <div class="description anchor-target" id="plaza">
+            <p class="subsection">litte greenwich plaza placemaking</p>
+        </div>
         <div class="gallery-container">
             <img class="gallery" src="content/worldtradecenter/PERSPECTIVE-1.png">
         </div>
 
         <div class="description">
-            <p class="subsection">~ common threads interactive installation</p>
+            <p>How might we transform an underused strip of asphalt in the corner of the World Trade Center site into a vibrant, inclusive public space?</p>
         </div>
+
+        <div class="gallery-container">
+            <img class="gallery" src="content/worldtradecenter/greenwich-before.jpg">
+        </div>
+
+        <div class="description">
+            <p><p>I measured and modeled the existing conditions of the site in Rhino, which I then used to develop conceptual renders of how the site could be activated.</p>
+            <p>I also designed a modular shade system which built on existing concrete block infrastructure, and collaborated with </p>
+            <p>These visuals were presented to internal and external stakeholders to communicate our team's vision for the site. As a result, stakeholders voiced their support and one even offered to donate the cornhole set.</p></p>
+        </div>
+
+        <div class="gallery-container">
+            <a href="content/worldtradecenter/PERSPECTIVE-1.png" class="glightbox" data-gallery="myGallery" data-title=""><img class="gallery zoom" src="content/worldtradecenter/PERSPECTIVE-1.png"></a>
+            <a href="content/worldtradecenter/PERSPECTIVE-2.png" class="glightbox" data-gallery="myGallery" data-title=""><img class="gallery zoom" src="content/worldtradecenter/PERSPECTIVE-2.png"></a>
+            <a href="content/worldtradecenter/PERSPECTIVE-3.png" class="glightbox" data-gallery="myGallery" data-title=""><img class="gallery zoom" src="content/worldtradecenter/PERSPECTIVE-3.png"></a>
+            <a href="content/worldtradecenter/musicPOV.jpg" class="glightbox" data-gallery="myGallery" data-title=""><img class="gallery zoom" src="content/worldtradecenter/musicPOV.jpg"></a>
+            <a href="content/worldtradecenter/WIDE.png" class="glightbox" data-gallery="myGallery" data-title=""><img class="gallery zoom" src="content/worldtradecenter/WIDE.png"></a>
+        </div>
+
+        <div class="description anchor-target" id="flagpole-furniture">
+            <p class="subsection">linear flagpole bench set</p>
+        </div>
+
+        <div class="gallery-container">
+            <a href="content/worldtradecenter/flagpole-bench/Bench-Installation.png" class="glightbox" data-gallery="flagpole" data-title=""><img class="gallery zoom" src="content/worldtradecenter/flagpole-bench/Bench-Installation.png"></a>
+        </div>
+
+        <div class="description">
+            <p>I designed a functional and comfortable linear bench set. These benches feature modular attachments for adaptive functionality.</p>
+            <p>The benches are designed to be mounted to the existing white concrete blocks, of which there are several dozen around the site, taking inspiration from <a href="https://www.panynj.gov/port-authority/en/blogs/land/wtc-benches-offer-a-fresh-start.html" target="_blank">bench designed onsite earlier that year</a>.</p>
+        </div>
+        
+        <div class="gallery-container">
+            <a href="content/worldtradecenter/flagpole-bench/flagpole-ref.jpg" class="glightbox" data-gallery="flagpole" data-title=""><img class="gallery zoom" src="content/worldtradecenter/flagpole-bench/flagpole-ref.jpg"></a>
+        </div>
+    
+        <div class="gallery-container">
+            <a href="content/worldtradecenter/flagpole-bench/attachment-render.png" class="glightbox" data-gallery="flagpole" data-title=""><img class="gallery zoom" src="content/worldtradecenter/flagpole-bench/attachment-render.png"></a>
+        </div>
+
+        <div class="gallery-container">
+            <a href="content/worldtradecenter/flagpole-bench/ADDONSHORT.png" class="glightbox" data-gallery="flagpole" data-title=""><img class="gallery zoom" src="content/worldtradecenter/flagpole-bench/ADDONSHORT.png"></a>
+        </div>
+
+        <!-- add this "common threads" section if it gets deployed irl + have real images -->
+
+        <!-- <div class="description">
+            <p class="subsection">common threads interactive installation</p>
+        </div> -->
 
         <br>
 
         <br> <br>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              const lightbox = GLightbox({
+                selector: '.glightbox'
+              });
+            });
+        </script>
 
     </body>
 
@@ -96,4 +178,16 @@
             </button>
         </a>
     </footer>
+    <script>
+        // Load header and footer dynamically
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header").innerHTML = data);
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer").innerHTML = data);
+        });
+    </script>
 </html>

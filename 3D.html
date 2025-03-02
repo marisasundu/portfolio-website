@@ -1,42 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href = "./style.css" rel = "stylesheet">
-        <link rel="icon" href="content/favicon.png">
-
-        <link href="lightbox/lightbox2-2.11.4/dist/css/lightbox.css" rel="stylesheet" />
-
-        <title>Risa Sundu</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        // Fetch head.html and append its content to the document head
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+             document.head.innerHTML += data;
+          })
+          .catch(error => console.error('Error loading head:', error));
+      </script>
     </head>
 
     <body>
-        <!-- <h1 id="main-menu">
-            <header>
-                <a class="links" id="title" href="/">risa sundu</a>
-                <a class="links menu" href="./contact.html">contact</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./about.html">about</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./work.html">work</a>
-            </header>
-        </h1> -->
-        <header class="fixed-header">
-            <nav>
-                <ul>
-                    <li style="font-weight: 400;"><a href="/">risa sundu</a></li>
-                    <li><a href="./work.html">work</a></li>
-                    <li><a href="./about.html">about</a></li>
-                    <li><a href="./contact.html">contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <br>
-        <br>
-        <br>
+        <div id="header"></div>
 
-        <br>
         <h2>* 3D design *</h2>
 
         <h3><span class="bold">Skills: </span>OnShape | Zbrush | Fusion 360</h3>
@@ -46,15 +27,15 @@
         </div> 
 
         <div class="gallery-container" style="max-width: fit-content;">
-            <a href="content/3D/trilobite1.jpg" data-lightbox="gallery" data-title="Zbrush model of prehistoric trilobite"><img class="gallery zoom" src="content/3D/trilobite1.jpg" style="height: 250px;"></a>
-            <a href="content/3D/trilobite2.jpg" data-lightbox="gallery" data-title="Zbrush model of prehistoric trilobite"><img class="gallery zoom" src="content/3D/trilobite2.jpg" style="height: 250px;"></a>
-            <a href="content/3D/tortuga1.jpg" data-lightbox="gallery" data-title="Zbrush model of Peruvian souvenir"><img class="gallery zoom" src="content/3D/tortuga1.jpg" style="height: 250px;"></a>
-            <a href="content/3D/tortuga2.jpg" data-lightbox="gallery" data-title="Zbrush model of Peruvian souvenir"><img class="gallery zoom" src="content/3D/tortuga2.jpg" style="height: 250px;"></a>
-            <a href="content/3D/tortuga3.jpg" data-lightbox="gallery" data-title="Zbrush model of Peruvian souvenir"><img class="gallery zoom" src="content/3D/tortuga3.jpg" style="height: 250px;"></a>
-            <a href="content/3D/blamp1.jpg" data-lightbox="gallery" data-title="OnShape model of Bluetooth amplifier housing for 3D printing"><img class="gallery zoom" src="content/3D/blamp1.jpg" style="height: 250px;"></a>
-            <a href="content/3D/RisaSundu_LampDesignAngled.jpg" data-lightbox="gallery" data-title="lamp designed & rendered in Fusion 360"><img class="gallery zoom" src="content/3D/RisaSundu_LampDesignAngled.jpg" style="height: 250px;"></a>
-            <a href="content/3D/RisaSundu_LampDesignSide.jpg" data-lightbox="gallery" data-title="lamp designed & rendered in Fusion 360"><img class="gallery zoom" src="content/3D/RisaSundu_LampDesignSide.jpg" style="height: 250px;"></a>
-            <a href="content/3D/RisaSundu_LampDesignFront.jpg" data-lightbox="gallery" data-title="lamp designed & rendered in Fusion 360"><img class="gallery zoom" src="content/3D/RisaSundu_LampDesignFront.jpg" style="height: 250px;"></a>
+            <a href="content/3D/trilobite1.jpg" class="glightbox" data-gallery="graphic" data-title="Zbrush model of prehistoric trilobite"><img class="gallery zoom" src="content/3D/trilobite1.jpg" style="height: 250px;"></a>
+            <a href="content/3D/trilobite2.jpg" class="glightbox" data-gallery="graphic" data-title="Zbrush model of prehistoric trilobite"><img class="gallery zoom" src="content/3D/trilobite2.jpg" style="height: 250px;"></a>
+            <a href="content/3D/tortuga1.jpg" class="glightbox" data-gallery="graphic" data-title="Zbrush model of Peruvian souvenir"><img class="gallery zoom" src="content/3D/tortuga1.jpg" style="height: 250px;"></a>
+            <a href="content/3D/tortuga2.jpg" class="glightbox" data-gallery="graphic" data-title="Zbrush model of Peruvian souvenir"><img class="gallery zoom" src="content/3D/tortuga2.jpg" style="height: 250px;"></a>
+            <a href="content/3D/tortuga3.jpg" class="glightbox" data-gallery="graphic" data-title="Zbrush model of Peruvian souvenir"><img class="gallery zoom" src="content/3D/tortuga3.jpg" style="height: 250px;"></a>
+            <a href="content/3D/blamp1.jpg" class="glightbox" data-gallery="graphic" data-title="OnShape model of Bluetooth amplifier housing for 3D printing"><img class="gallery zoom" src="content/3D/blamp1.jpg" style="height: 250px;"></a>
+            <a href="content/3D/RisaSundu_LampDesignAngled.jpg" class="glightbox" data-gallery="graphic" data-title="lamp designed & rendered in Fusion 360"><img class="gallery zoom" src="content/3D/RisaSundu_LampDesignAngled.jpg" style="height: 250px;"></a>
+            <a href="content/3D/RisaSundu_LampDesignSide.jpg" class="glightbox" data-gallery="graphic" data-title="lamp designed & rendered in Fusion 360"><img class="gallery zoom" src="content/3D/RisaSundu_LampDesignSide.jpg" style="height: 250px;"></a>
+            <a href="content/3D/RisaSundu_LampDesignFront.jpg" class="glightbox" data-gallery="graphic" data-title="lamp designed & rendered in Fusion 360"><img class="gallery zoom" src="content/3D/RisaSundu_LampDesignFront.jpg" style="height: 250px;"></a>
         </div>
 
         <script src="lightbox/lightbox2-2.11.4/dist/js/lightbox-plus-jquery.js"></script>
@@ -67,6 +48,13 @@
             })
         </script>
         
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              const lightbox = GLightbox({
+                selector: '.glightbox'
+              });
+            });
+        </script>
     </body>
 
     <footer>
@@ -86,4 +74,17 @@
             </button>
         </a>
     </footer>
+
+    <script>
+        // Load header and footer dynamically
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header").innerHTML = data);
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer").innerHTML = data);
+        });
+    </script>
 </html>

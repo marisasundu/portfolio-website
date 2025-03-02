@@ -1,43 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link href = "./style.css" rel = "stylesheet">
-        <link href="lightbox/lightbox2-2.11.4/dist/css/lightbox.css" rel="stylesheet" />
-
-        <link rel="icon" href="content/favicon.png">
-        <title>Risa Sundu</title>
-        <!-- <script src="jquery-3.6.1.js"></script> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        // Fetch head.html and append its content to the document head
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+             // Insert the fetched head content before any existing head elements
+             // (Or replace the head's innerHTML if you want a complete override)
+             document.head.innerHTML += data;
+          })
+          .catch(error => console.error('Error loading head:', error));
+      </script>
     </head>
 
     <body>
-        <!-- <h1 id="main-menu">
-            <header>
-                <a class="links" id="title" href="/">risa sundu</a>
-                <a class="links menu" href="./contact.html">contact</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./about.html">about</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./work.html">work</a>
-            </header>
-        </h1> -->
-        <header class="fixed-header">
-            <nav>
-                <ul>
-                    <li style="font-weight: 400;"><a href="/">risa sundu</a></li>
-                    <li><a href="./work.html">work</a></li>
-                    <li><a href="./about.html">about</a></li>
-                    <li><a href="./contact.html">contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <br>
-        <br>
-        <br>
+        <div id="header"></div>
 
-        <br>
         <h2>* speculative new york times *</h2>
 
         <h3><span class="bold">Skills: </span>InDesign | Prompt Engineering | Artificial Intelligence</h3>
@@ -92,9 +74,9 @@
             </div>
 
             <div class="gallery-container" style="justify-content: left; max-width: 700px;">
-                <a href="content/2nyt/cart1.jpg" data-lightbox="cart" data-title="Exploring themes of virtual reality and capitalism, I turned first to the most potent visual symbols of consumerism and mass production."><img class="gallery zoom small" src="content/2nyt/cart1.jpg"></a>
-                <a href="content/2nyt/cart2.jpg" data-lightbox="cart" data-title="Removed some details from the prompt, but the images still look very unrealistic."><img class="gallery zoom small" src="content/2nyt/cart2.jpg"></a>
-                <a href="content/2nyt/cart3.jpg" data-lightbox="cart" data-title="Using specific camera filters in the prompt, I obtain a much more realistic effect. Top right becomes the cover page image."><img class="gallery zoom small" src="content/2nyt/cart3.jpg"></a>
+                <a href="content/2nyt/cart1.jpg" class="glightbox" data-gallery="myGallery" data-title="Exploring themes of virtual reality and capitalism, I turned first to the most potent visual symbols of consumerism and mass production."><img class="gallery zoom small" src="content/2nyt/cart1.jpg"></a>
+                <a href="content/2nyt/cart2.jpg" class="glightbox" data-gallery="myGallery" data-title="Removed some details from the prompt, but the images still look very unrealistic."><img class="gallery zoom small" src="content/2nyt/cart2.jpg"></a>
+                <a href="content/2nyt/cart3.jpg" class="glightbox" data-gallery="myGallery" data-title="Using specific camera filters in the prompt, I obtain a much more realistic effect. Top right becomes the cover page image."><img class="gallery zoom small" src="content/2nyt/cart3.jpg"></a>
             </div>
             
             <div class="description">
@@ -102,12 +84,12 @@
             </div> 
 
             <div class="gallery-container" style="justify-content: left; max-width: 700px;">
-                <a href="content/2nyt/dolls1.jpg" data-lightbox="dolls" data-title="How would the virtual reality industry target kids through advertising?"><img class="gallery zoom small" src="content/2nyt/dolls1.jpg"></a>
-                <a href="content/2nyt/dolls2.jpg" data-lightbox="dolls" data-title="Midjourney cannot infer what tactics advertisers use, so I prompt a specific scene the advertisers might create."><img class="gallery zoom small" src="content/2nyt/dolls2.jpg"></a>
-                <a href="content/2nyt/dolls3.jpg" data-lightbox="dolls" data-title="Continuing to experiment with getting Midjourney to generate the scene I'm envisioning"><img class="gallery zoom small" src="content/2nyt/dolls3.jpg"></a>
-                <a href="content/2nyt/dolls4.jpg" data-lightbox="dolls" data-title="Versions of top right from Image 2"><img class="gallery zoom small" src="content/2nyt/dolls4.jpg"></a>
-                <a href="content/2nyt/dolls5.jpg" data-lightbox="dolls" data-title="Versions of bottom right from Image 3."><img class="gallery zoom small" src="content/2nyt/dolls5.jpg"></a>
-                <a href="content/2nyt/dolls6.jpg" data-lightbox="dolls" data-title="After several rounds of versioning, the image included in the final paper was generated (top right)."><img class="gallery zoom small" src="content/2nyt/dolls6.jpg"></a>
+                <a href="content/2nyt/dolls1.jpg" class="glightbox" data-gallery="dolls" data-title="How would the virtual reality industry target kids through advertising?"><img class="gallery zoom small" src="content/2nyt/dolls1.jpg"></a>
+                <a href="content/2nyt/dolls2.jpg" class="glightbox" data-gallery="dolls" data-title="Midjourney cannot infer what tactics advertisers use, so I prompt a specific scene the advertisers might create."><img class="gallery zoom small" src="content/2nyt/dolls2.jpg"></a>
+                <a href="content/2nyt/dolls3.jpg" class="glightbox" data-gallery="dolls" data-title="Continuing to experiment with getting Midjourney to generate the scene I'm envisioning"><img class="gallery zoom small" src="content/2nyt/dolls3.jpg"></a>
+                <a href="content/2nyt/dolls4.jpg" class="glightbox" data-gallery="dolls" data-title="Versions of top right from Image 2"><img class="gallery zoom small" src="content/2nyt/dolls4.jpg"></a>
+                <a href="content/2nyt/dolls5.jpg" class="glightbox" data-gallery="dolls" data-title="Versions of bottom right from Image 3."><img class="gallery zoom small" src="content/2nyt/dolls5.jpg"></a>
+                <a href="content/2nyt/dolls6.jpg" class="glightbox" data-gallery="dolls" data-title="After several rounds of versioning, the image included in the final paper was generated (top right)."><img class="gallery zoom small" src="content/2nyt/dolls6.jpg"></a>
             </div>
 
             <div class="description">
@@ -115,9 +97,9 @@
             </div> 
 
             <div class="gallery-container" style="justify-content: left; max-width: 700px;">
-                <a href="content/2nyt/chains1.jpg" data-lightbox="chains" data-title="Trying a metaphor ('like snakes')"><img class="gallery zoom small" src="content/2nyt/chains1.jpg"></a>
-                <a href="content/2nyt/chains2.jpg" data-lightbox="chains" data-title="Simplifying prompt"><img class="gallery zoom small" src="content/2nyt/chains2.jpg"></a>
-                <a href="content/2nyt/chains3.jpg" data-lightbox="chains" data-title="Add shattering to increase emotional impact. Top left becomes background for false ad in final paper."><img class="gallery zoom small" src="content/2nyt/chains3.jpg"></a>
+                <a href="content/2nyt/chains1.jpg" class="glightbox" data-gallery="chains" data-title="Trying a metaphor ('like snakes')"><img class="gallery zoom small" src="content/2nyt/chains1.jpg"></a>
+                <a href="content/2nyt/chains2.jpg" class="glightbox" data-gallery="chains" data-title="Simplifying prompt"><img class="gallery zoom small" src="content/2nyt/chains2.jpg"></a>
+                <a href="content/2nyt/chains3.jpg" class="glightbox" data-gallery="chains" data-title="Add shattering to increase emotional impact. Top left becomes background for false ad in final paper."><img class="gallery zoom small" src="content/2nyt/chains3.jpg"></a>
             </div>
 
             <div class="description">
@@ -128,9 +110,9 @@
             </div>
 
             <div class="gallery-container" style="justify-content: left; max-width: 900px;">
-                <a href="content/2nyt/gpt2.jpg" data-lightbox="gpt" data-title="Since I was taking a philosophy class about gender, race, and sexuality at the time, I wanted to incorporate a philosophical perspective into the paper."><img class="gallery zoom" src="content/2nyt/gpt2.jpg"></a>
-                <a href="content/2nyt/gpt3.jpg" data-lightbox="gpt" data-title="I used increasingly specific prompts to get ChatGPT to generate the articles I had thought up."><img class="gallery zoom" src="content/2nyt/gpt3.jpg"></a>
-                <a href="content/2nyt/gpt1.jpg" data-lightbox="gpt" data-title="A good task for ChatGPT, though I later asked it to calculate it taking leap years into account to get the issue number I actually used."><img class="gallery zoom " src="content/2nyt/gpt1.jpg"></a>
+                <a href="content/2nyt/gpt2.jpg" class="glightbox" data-gallery="gpt" data-title="Since I was taking a philosophy class about gender, race, and sexuality at the time, I wanted to incorporate a philosophical perspective into the paper."><img class="gallery zoom" src="content/2nyt/gpt2.jpg"></a>
+                <a href="content/2nyt/gpt3.jpg" class="glightbox" data-gallery="gpt" data-title="I used increasingly specific prompts to get ChatGPT to generate the articles I had thought up."><img class="gallery zoom" src="content/2nyt/gpt3.jpg"></a>
+                <a href="content/2nyt/gpt1.jpg" class="glightbox" data-gallery="gpt" data-title="A good task for ChatGPT, though I later asked it to calculate it taking leap years into account to get the issue number I actually used."><img class="gallery zoom " src="content/2nyt/gpt1.jpg"></a>
             </div>
 
             <div class="description">
@@ -150,7 +132,13 @@
               'fitImagesInViewport': true
             })
         </script>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const lightbox = GLightbox({
+        selector: '.glightbox'
+      });
+    });
+</script>
     </body>
 
     <footer>
@@ -170,4 +158,17 @@
             </button>
         </a>
     </footer>
+
+    <script>
+        // Load header and footer dynamically
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header").innerHTML = data);
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer").innerHTML = data);
+        });
+    </script>
 </html>

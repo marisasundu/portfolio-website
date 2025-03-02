@@ -3,6 +3,7 @@ let lines = [];
 // let button;
 let move = true;
 let overlay; // PGraphics buffer for overlay
+let currHeight = 300;
 
 function preload() {
   // Load an image before the program starts (replace 'your-image.jpg' with your image file path)
@@ -12,14 +13,14 @@ function preload() {
 function setup() {
   // createCanvas(windowWidth, 400);
 
-  let cnv = createCanvas(windowWidth, 300); // Adjust dimensions as needed
+  let cnv = createCanvas(windowWidth, currHeight); // Adjust dimensions as needed
   cnv.parent('mySketchContainer');  // This attaches the canvas to the specified div
   
   // Initialize the overlay buffer with the same dimensions
   // overlay = createGraphics(600, 400);
   
   // Initialize the overlay buffer
-  overlay = createGraphics(windowWidth, 300);
+  overlay = createGraphics(windowWidth, currHeight);
   strokeWeight(.3);
   
   
@@ -37,8 +38,8 @@ function setup() {
 
 function windowResized() {
   // Resize canvas and overlay whenever the window size changes
-  resizeCanvas(windowWidth, 300);
-  overlay = createGraphics(windowWidth, 300);
+  resizeCanvas(windowWidth, currHeight);
+  overlay = createGraphics(windowWidth, currHeight);
 
   lines = [];
   for (i = 0; i < 20; i++) {
@@ -53,8 +54,8 @@ class Line {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.xSpeed = random(-0.5, 0.5);
-    this.ySpeed = random(-0.5, 0.5);
+    this.xSpeed = random(-0.3, 0.3);
+    this.ySpeed = random(-0.3, 0.3);
   }
 
   move() {

@@ -1,48 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link href = "./style.css" rel = "stylesheet">
-        <link rel="icon" href="content/favicon.png">
-        <title>Risa Sundu</title>
-
-        <!-- <style>
-            /* bc so many images have white background */
-            html {background-color: white;} 
-        </style> -->
-
-        <link href="lightbox/lightbox2-2.11.4/dist/css/lightbox.css" rel="stylesheet" />
-        <!-- <script src="jquery-3.6.1.js"></script> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        // Fetch head.html and append its content to the document head
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+             // Insert the fetched head content before any existing head elements
+             // (Or replace the head's innerHTML if you want a complete override)
+             document.head.innerHTML += data;
+          })
+          .catch(error => console.error('Error loading head:', error));
+      </script>
     </head>
 
     <body>
-        <!-- <h1 id="main-menu">
-            <header>
-                <a class="links" id="title" href="/">risa sundu</a>
-                <a class="links menu" href="./contact.html">contact</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./about.html">about</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./work.html">work</a>
-            </header>
-        </h1> -->
-        <header class="fixed-header">
-            <nav>
-                <ul>
-                    <li style="font-weight: 400;"><a href="/">risa sundu</a></li>
-                    <li><a href="./work.html">work</a></li>
-                    <li><a href="./about.html">about</a></li>
-                    <li><a href="./contact.html">contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <br>
-        <br>
-        <br>
-
-        <br>
+        <div id="header"></div>
         <h2>* friendship park: an urban-ecological study *</h2>
 
         <h3><span class="bold">Skills: </span>Urban Design, Conceptual Architectural Visualization</h3>
@@ -59,13 +35,13 @@
         </div>
 
         <div class="gallery-container">
-            <a href="content/friendship-park/circles.png" data-lightbox="gallery" data-title="contrasting urban textures of adjacent neighborhoods on either side of the international border"><img class="gallery zoom" src="content/friendship-park/circles.png"></a>
-            <a href="content/friendship-park/thumbnail.png" data-lightbox="gallery" data-title="envisioning community connection through strategic binational engagement"><img class="gallery zoom" src="content/friendship-park/thumbnail.png"></a>
-            <a href="content/friendship-park/animation.gif" data-lightbox="gallery" data-title="imagine an intermeshing of urban & rural through a more porous threshold"><img class="gallery zoom" src="content/friendship-park/animation.gif"></a>
-            <a href="content/friendship-park/topo-wall.png" data-lightbox="gallery" data-title="what if we used the logics of the wetlands to design our border region?"><img class="gallery zoom" src="content/friendship-park/topo-wall.png"></a>
-            <a href="content/friendship-park/engage.png" data-lightbox="gallery" data-title="at friendship park, various forces contradict to magnetically attract & repel people"><img class="gallery zoom" src="content/friendship-park/engage.png"></a>
-            <a href="content/friendship-park/meeting-boxes.png" data-lightbox="gallery" data-title="what if the border zone became a place where two estranged communities could rediscover each other?"><img class="gallery zoom" src="content/friendship-park/meeting-boxes.png"></a>
-            <a href="content/friendship-park/projected-circles.png" data-lightbox="gallery" data-title="rather than strictly segmenting uses, this region would thrive through a gradient of functionality"><img class="gallery zoom" src="content/friendship-park/projected-circles.png"></a>
+            <a href="content/friendship-park/circles.png" class="glightbox" data-gallery="myGallery" data-title="contrasting urban textures of adjacent neighborhoods on either side of the international border"><img class="gallery zoom" src="content/friendship-park/circles.png"></a>
+            <a href="content/friendship-park/thumbnail.png" class="glightbox" data-gallery="myGallery" data-title="envisioning community connection through strategic binational engagement"><img class="gallery zoom" src="content/friendship-park/thumbnail.png"></a>
+            <a href="content/friendship-park/animation.gif" class="glightbox" data-gallery="myGallery" data-title="imagine an intermeshing of urban & rural through a more porous threshold"><img class="gallery zoom" src="content/friendship-park/animation.gif"></a>
+            <a href="content/friendship-park/topo-wall.png" class="glightbox" data-gallery="myGallery" data-title="what if we used the logics of the wetlands to design our border region?"><img class="gallery zoom" src="content/friendship-park/topo-wall.png"></a>
+            <a href="content/friendship-park/engage.png" class="glightbox" data-gallery="myGallery" data-title="at friendship park, various forces contradict to magnetically attract & repel people"><img class="gallery zoom" src="content/friendship-park/engage.png"></a>
+            <a href="content/friendship-park/meeting-boxes.png" class="glightbox" data-gallery="myGallery" data-title="what if the border zone became a place where two estranged communities could rediscover each other?"><img class="gallery zoom" src="content/friendship-park/meeting-boxes.png"></a>
+            <a href="content/friendship-park/projected-circles.png" class="glightbox" data-gallery="myGallery" data-title="rather than strictly segmenting uses, this region would thrive through a gradient of functionality"><img class="gallery zoom" src="content/friendship-park/projected-circles.png"></a>
             
         </div>
         <br>
@@ -74,20 +50,13 @@
             <p style="text-align: center;"><i>[this project's documentation is a work in progress, thanks for visiting :)]</i></p>
         </div>
 
-        <script src="lightbox/lightbox2-2.11.4/dist/js/lightbox-plus-jquery.js"></script>
         <script>
-            lightbox.option({
-              'resizeDuration': 0,
-              'wrapAround': true,
-              'imageFadeDuration': 250,
-              'fitImagesInViewport': true
-            })
+            document.addEventListener("DOMContentLoaded", function() {
+              const lightbox = GLightbox({
+                selector: '.glightbox'
+              });
+            });
         </script>
-
-        
-        <!-- <div style="display: flex; justify-content: center;">  -->
-        
-
     </body>
 
     <footer>
@@ -107,4 +76,16 @@
             </button>
         </a>
     </footer>
+    <script>
+        // Load header and footer dynamically
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header").innerHTML = data);
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer").innerHTML = data);
+        });
+    </script>
 </html>

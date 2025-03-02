@@ -1,37 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href = "./style.css" rel = "stylesheet">
-        <link rel="icon" href="content/favicon.png">
-        <title>Risa Sundu</title>
+    <script>
+        // Fetch head.html and append its content to the document head
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+             // Insert the fetched head content before any existing head elements
+             // (Or replace the head's innerHTML if you want a complete override)
+             document.head.innerHTML += data;
+          })
+          .catch(error => console.error('Error loading head:', error));
+      </script>
     </head>
     <body>
-        <!-- <h1 id="main-menu">
-            <header>
-                <a class="links" id="title" href="/">risa sundu</a>
-                <a class="links menu" href="./contact.html">contact</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./about.html">about</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./work.html" id="selected">work</a>
-            </header>
-            
-        </h1> -->
-        <header class="fixed-header">
-            <nav>
-                <ul>
-                    <li style="font-weight: 400;"><a href="/">risa sundu</a></li>
-                    <li ><a id="header-selected" href="./work.html">work</a></li>
-                    <li><a href="./about.html">about</a></li>
-                    <li><a href="./contact.html">contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <br>
-        <br>
-        <br>
+        <div id="header"></div>
         <!-- <div class="description">
             <p>Here you can peruse some of my recent creations. Feel free to <a href=./contact.html class="socials" style="text-decoration: none;">reach out</a> if you'd like to learn more about any of my projects.</p>
         </div> -->
@@ -84,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="item urban class" onclick="navigateToLink()" style="grid-column: span 1; grid-row: span 2; aspect-ratio: .4985;">
+            <div class="item urban class graphic" onclick="navigateToLink()" style="grid-column: span 1; grid-row: span 2; aspect-ratio: .4985;">
                 <div class="hovereffect">
                     <img class="img-responsive" src="content/friendship-park/otherme.png" alt="" style="width: 100%; object-position: 50% 50%;">
                     <div class="overlay">
@@ -93,13 +77,13 @@
                     </div>
                 </div>
             </div>
-           
-            <div class="item interaction client" onclick="navigateToLink()" >
+
+            <div class="item class graphic urban" onclick="navigateToLink()">
                 <div class="hovereffect">
-                    <img class="img-responsive" src="content/1qualcomm/thumbnail-2.png" alt="">
+                    <img class="img-responsive" src="content/alley/v2-collage.png" alt="" style="right: 0px;">
                     <div class="overlay">
-                        <a class="info" href="./vrclassroom.html">virtual reality classroom</a>
-                        <a class="info-sub">Qualcomm Institute | <span class="italics">Interaction Design, 3D Modeling, VR</span></a>
+                        <a class="info" href="./alley.html">metamorphosis alley</a>
+                        <a class="info-sub"><span class="italics">Urban Design, SketchUp, Enscape</span></a>
                     </div>
                 </div>
             </div>
@@ -172,12 +156,12 @@
                 </div>
             </div>
 
-            <div class="item class personal" onclick="navigateToLink()">
+            <div class="item interaction client" onclick="navigateToLink()" >
                 <div class="hovereffect">
-                    <img class="img-responsive" src="content/3D/RisaSundu_LampDesignSide.jpg" alt="" style="right: 0px;">
+                    <img class="img-responsive" src="content/1qualcomm/thumbnail-2.png" alt="">
                     <div class="overlay">
-                        <a class="info" href="./3D.html">3D Design</a>
-                        <a class="info-sub"><span class="italics">Fusion 360, Zbrush, OnShape</span></a>
+                        <a class="info" href="./vrclassroom.html">virtual reality classroom</a>
+                        <a class="info-sub">Qualcomm Institute | <span class="italics">Interaction Design, 3D Modeling, VR</span></a>
                     </div>
                 </div>
             </div>
@@ -284,14 +268,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
         </script>
+        
+        <footer>
+            <div class="footer-content">
+                <span>this website was handmade with love</span>
+            </div>
+        </footer>
+        <script>
+            // Load header and footer dynamically
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch("header.html")
+                    .then(response => response.text())
+                    .then(data => {
+                    document.getElementById("header").innerHTML = data;
 
+                    // Manually highlight the correct tab by modifying it inside each page
+                    document.querySelector('a[href="./work.html"]').id = "header-selected";
+                    });
+                fetch("footer.html")
+                    .then(response => response.text())
+                    .then(data => document.getElementById("footer").innerHTML = data);
+            });
+        </script>
     </body>
-
- <br>
-    <footer>
-        <div class="footer-content">
-            <span>this website was handmade with love</span>
-        </div>
-    </footer>
+    
 
 </html>

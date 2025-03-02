@@ -1,58 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link href = "./style.css" rel = "stylesheet">
-        <link rel="icon" href="content/favicon.png">
-        <title>Risa Sundu</title>
-        <script src="./content/triangle-gradient/p5.js"></script>
-        <script src="./content/triangle-gradient/sketch.js"></script>
+    <script>
+        // Fetch head.html and append its content to the document head
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+             // Insert the fetched head content before any existing head elements
+             // (Or replace the head's innerHTML if you want a complete override)
+             document.head.innerHTML += data;
+          })
+          .catch(error => console.error('Error loading head:', error));
+      </script>
     </head>
     <body class="section">
-        <!-- <h1 id="main-menu">
-            <header>
-                <a class="links" id="title" href="/">risa sundu</a>
-                <a class="links menu" href="./contact.html">contact</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./about.html">about</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./work.html">work</a>
-            </header>
-        </h1> -->
-        <header class="fixed-header">
-            <nav>
-                <ul>
-                    <li style="font-weight: 400;"><a id="header-selected" href="/">risa sundu</a></li>
-                    <li><a href="./work.html">work</a></li>
-                    <li><a href="./about.html">about</a></li>
-                    <li><a href="./contact.html">contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <br>
-        <br>
-        <br>
-
-        <br>
+        <div id="header"></div>
         <br>
         <div class="description" >
             <p >Hello! My name is Risa, and I'm a multi-disciplinary designer based in San Diego.</p>
             <p >I'm studying Speculative Design, Cognitive Science, and Urban Planning at the University of California San Diego.</p>
-            <p >I also intern at Estudio Teddy Cruz + Fonna Forman and am completing an independent honors thesis on human-building interaction in virtual reality at UCSD's Interactive Cognition Lab.</p>
+            <p >I also work as an urban-architectural design intern at <a class="socials" target="_blank" href="http://estudioteddycruz.com/">Estudio Teddy Cruz + Fonna Forman</a> and am completing an honors research thesis on human-building interaction in virtual reality at UCSD's <a class="socials" target="_blank" href="https://interactivity.ucsd.edu/">Interactive Cognition Lab</a>, advised by Dr. David Kirsh.</p>
             <!-- <p style="text-align: center;">This website is one of many creative experiments- it is a work in progress, just like much of what you will find within. Enjoy!</p> -->
         </div>
         <!-- <h2>i am a maker, explorer, experimenter, and adventurer; a jack of all trades, yet to become a master of one.</h2> -->
-        <br>
-        <br>
+        <br><br><br>
         <div id="mySketchContainer"></div>
 
         <!-- <div class="gallery-container">
             <img class="gallery" id="logo" src="content/logo.png">
         </div>  -->
-        <br>
-        <br>
+        <br><br>
   <!-- Custom sketch JavaScript file -->
   
 
@@ -66,4 +44,22 @@
             <span>this website was handmade with love</span>
         </div>
     </footer>
+    <script src="./content/triangle-gradient/p5.js"></script>
+    <script src="./content/triangle-gradient/sketch.js"></script>
+    <script>
+        // Load header and footer dynamically
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                    .then(response => response.text())
+                    .then(data => {
+                    document.getElementById("header").innerHTML = data;
+
+                    // Manually highlight the correct tab by modifying it inside each page
+                    document.querySelector('a[href="/"]').id = "header-selected";
+                    });
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer").innerHTML = data);
+        });
+    </script>
 </html>

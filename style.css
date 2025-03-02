@@ -273,7 +273,9 @@ a.socials:hover {
 }
 .small {
     height: 100px;
-    
+}
+.medium {
+    height: 250px;
 }
 .zoom {
     margin: 5px 5px;
@@ -536,6 +538,9 @@ main {
     transition: 0.8s;
 } */
 
+.anchor-target {
+    scroll-margin-top: 60px; /* Adjust as needed (header height + extra spacing) */
+}
 
 @media only screen and (max-width: 560px) {
     .menu {

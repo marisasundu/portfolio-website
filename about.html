@@ -1,40 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href = "./style.css" rel = "stylesheet">
-        <link rel="icon" href="content/favicon.png">
-        <title>Risa Sundu</title>
+    <script>
+        // Fetch head.html and append its content to the document head
+        fetch('head.html')
+          .then(response => response.text())
+          .then(data => {
+             // Insert the fetched head content before any existing head elements
+             // (Or replace the head's innerHTML if you want a complete override)
+             document.head.innerHTML += data;
+          })
+          .catch(error => console.error('Error loading head:', error));
+      </script>
     </head>
     <body>
-        <!-- <h1 id="main-menu">
-            <header>
-                <a class="links" id="title" href="/">risa sundu</a>
-                <a class="links menu" href="./contact.html">contact</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./about.html" id="selected">about</a>
-                <p class="menu">/</p>
-                <a class="links menu" href="./work.html">work</a>
-            </header>
-        </h1> -->
-        <header class="fixed-header">
-            <nav>
-                <ul>
-                    <li style="font-weight: 400;"><a href="/">risa sundu</a></li>
-                    <li><a href="./work.html">work</a></li>
-                    <li><a id="header-selected" href="./about.html">about</a></li>
-                    <li><a href="./contact.html">contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <br>
-        <br>
-        <br>
-
-        <br>
+        <div id="header"></div>
         <body>
-            <h2>- ABOUT ME-</h2>
+            <h2>- ABOUT ME -</h2>
             <div class="grid-layout">
                 <div class="description left">
                     <p>Hey there! My name is Risa and I am a deeply interdisciplinary creative with interests ranging from interaction and product design to urban planning and architecture.</p>
@@ -73,11 +56,27 @@
                     <img class="gallery" src="content/about/pano.jpg" style="width:75%; height: auto;">
                 </div>
         </body>
+        <footer>
+            <div class="footer-content" >
+                <span>this website was handmade with love</span>
+            </div>
+        </footer>
+        <script>
+            // Load header and footer dynamically
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch("header.html")
+                    .then(response => response.text())
+                    .then(data => {
+                    document.getElementById("header").innerHTML = data;
 
+                    // Manually highlight the correct tab by modifying it inside each page
+                    document.querySelector('a[href="./about.html"]').id = "header-selected";
+                    });
+                fetch("footer.html")
+                    .then(response => response.text())
+                    .then(data => document.getElementById("footer").innerHTML = data);
+            });
+        </script>
     </body>
-    <footer>
-        <div class="footer-content" >
-            <span>this website was handmade with love</span>
-        </div>
-    </footer>
+    
 </html>
