@@ -428,7 +428,7 @@ a.socials:hover {
 .fixed-header {
     position: fixed;
     background-color: rgb(218,218,218);
-    border: 2px solid rgb(31, 31, 31);
+    border: 1.5px solid rgb(31, 31, 31);
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -516,7 +516,7 @@ main {
     border: none;
     background-color: rgb(218, 218, 218);
     color: rgb(31, 31, 31);
-    outline: 2px solid rgb(31, 31, 31);
+    outline: 1.5px solid rgb(31, 31, 31);
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -541,6 +541,25 @@ main {
 .anchor-target {
     scroll-margin-top: 60px; /* Adjust as needed (header height + extra spacing) */
 }
+
+/* Customize the caption description */
+.glightbox .gdesc {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: #fff;                         /* White text */
+    font-size: 16px;                      /* Custom font size */
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  
+  /* Customize the caption title if needed */
+  .glightbox .gtitle {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffcc00;  /* Example: yellow text for the title */
+    margin-bottom: 5px;
+  }
+  
 
 @media only screen and (max-width: 560px) {
     .menu {
@@ -578,6 +597,7 @@ main {
         font-size: 14px;
         padding: 6px;
         margin: 8px;
+        outline: 1px solid rgb(31, 31, 31);
     }
     .filter-button:hover{
         font-size: 14px;
@@ -632,5 +652,20 @@ main {
         display: grid;
         grid-column: 3;
         place-items: center;
+    }
+}
+
+/* fix grid on work page for mobile */
+@media only screen and (max-width: 560px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+        gap: 2px;
+        margin: 2px;
+    }
+}
+@media only screen and (max-width: 560px) {
+    .container .item {
+        aspect-ratio: 1 !important; /* Force square shape on mobile */
     }
 }
